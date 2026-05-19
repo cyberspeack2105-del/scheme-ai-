@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Login - Freedy AI</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#7f0df2",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#191022",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#2a1d3a",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                    backgroundImage: {
+                        'hero-gradient': 'radial-gradient(ellipse at top right, rgba(127, 13, 242, 0.15), transparent 70%)',
+                        'hero-gradient-dark': 'radial-gradient(ellipse at top right, rgba(127, 13, 242, 0.3), transparent 70%)',
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-50 font-display transition-colors duration-300">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <nav
+            class="sticky top-0 z-50 w-full border-b border-[#f2f0f5] dark:border-white/10 bg-white/80 dark:bg-[#191022]/80 backdrop-blur-md">
+            <div class="flex justify-center w-full px-4 sm:px-10 py-3">
+                <div class="flex w-full max-w-[1280px] items-center justify-between">
+                    <div class="flex items-center gap-4 text-slate-900 dark:text-white">
+                        <img src="logo.png" alt="Logo" class="h-10 w-auto object-contain" />
+                        <span class="text-xl font-bold tracking-tight">Freedy AI</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <section class="flex-1 flex items-center justify-center py-12 px-4 sm:px-10">
+            <div
+                class="w-full max-w-md bg-white dark:bg-surface-dark p-8 rounded-xl shadow-xl border border-slate-100 dark:border-white/10">
+                <h2 class="text-2xl font-bold text-center mb-6 text-slate-900 dark:text-white">Welcome Back</h2>
+
+                <form id="loginForm" class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-sm font-medium mb-1">Name</label>
+                        <input type="text" id="name" name="name" required
+                            class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-[#120b18] p-3 text-sm focus:border-primary focus:ring-primary"
+                            placeholder="Your Name">
+                    </div>
+
+                    <div>
+                        <label for="password" class="block text-sm font-medium mb-1">Password</label>
+                        <input type="password" id="password" name="password" required
+                            class="w-full rounded-lg border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-[#120b18] p-3 text-sm focus:border-primary focus:ring-primary"
+                            placeholder="••••••••">
+                    </div>
+
+                    <button type="submit"
+                        class="w-full rounded-lg bg-primary py-3 text-white font-bold shadow-lg shadow-primary/25 hover:bg-primary/90 transition-all hover:scale-[1.02] active:scale-[0.98]">
+                        Login
+                    </button>
+                </form>
+
+                <p class="mt-4 text-center text-sm text-slate-500">
+                    Don't have an account? <a href="register.html"
+                        class="text-primary font-bold hover:underline">Register</a>
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const password = document.getElementById('password').value;
+
+            try {
+                const response = await fetch('http://127.0.0.1:8008/login', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ name, password })
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+
+                    // Respond to user
+                    // Store user info in localStorage if needed for chat page
+                    localStorage.setItem('user', data.user);
+                    if (data.image_url) localStorage.setItem('image_url', data.image_url);
+
+                    window.location.href = 'chat.html';
+                } else {
+                    const error = await response.json();
+                    alert('Error: ' + error.detail);
+                }
+            } catch (err) {
+                alert('Connection Error: ' + err.message);
+                console.error(err);
+            }
+        });
+    </script>
+</body>
+
+</html>

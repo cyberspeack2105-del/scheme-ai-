@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+            border: 3px solid #ddd;
+        }
+
+        .info {
+            margin: 10px 0;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <h2>Welcome!</h2>
+        <img id="userImage" src="https://via.placeholder.com/150" alt="Profile" class="profile-pic">
+        <h3 class="info" id="userName">User Name</h3>
+        <p class="info" id="userEmail">user@example.com</p>
+        <button onclick="logout()" style="background-color: #f44336;">Logout</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexAuth | Secure Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-hover: #4f46e5;
+            --bg: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --error: #ef4444;
+            --success: #10b981;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background: var(--bg);
+            background-image: 
+                radial-gradient(at 0% 0%, hsla(253,16%,7%,1) 0, transparent 50%), 
+                radial-gradient(at 50% 0%, hsla(225,39%,30%,1) 0, transparent 50%), 
+                radial-gradient(at 100% 0%, hsla(339,49%,30%,1) 0, transparent 50%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--text-main);
+            overflow: hidden;
+        }
+
+        .container {
+            position: relative;
+            width: 400px;
+            perspective: 1000px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s;
+        }
+
+        .hidden {
+            display: none !important;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            text-align: center;
+            background: linear-gradient(to right, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.subtitle {
+            color: var(--text-muted);
+            text-align: center;
+            font-size: 14px;
+            margin-bottom: 32px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 6px;
+            color: var(--text-muted);
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 16px;
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            color: white;
+            font-size: 15px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: var(--primary-hover);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        .toggle-text {
+            text-align: center;
+            margin-top: 24px;
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        .toggle-link {
+            color: var(--primary);
+            cursor: pointer;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .toggle-link:hover {
+            text-decoration: underline;
+        }
+
+        .msg {
+            margin-top: 20px;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 14px;
+            text-align: center;
+            display: none;
+        }
+
+        .error { background: rgba(239, 68, 68, 0.15); color: #fca5a5; display: block; border: 1px solid rgba(239, 68, 68, 0.3); }
+        .success { background: rgba(16, 185, 129, 0.15); color: #6ee7b7; display: block; border: 1px solid rgba(16, 185, 129, 0.3); }
+
+        /* Dashboard Styles */
+        .dashboard {
+            text-align: center;
+        }
+
+        .user-avatar {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary), #c084fc);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 32px;
+            font-weight: 600;
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+        }
+
+        .logout-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 30px;
+        }
+
+        .logout-btn:hover {
+            background: rgba(239, 68, 68, 0.1);
+            border-color: var(--error);
+            color: var(--error);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .animate {
+            animation: fadeIn 0.4s ease forwards;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- AUTH CARD -->
+    <div id="auth-card" class="card animate">
+        <!-- Register Form -->
+        <div id="register-box">
+            <h2>Create Account</h2>
+            <p class="subtitle">Join NexAuth and secure your data today.</p>
+            
+            <div class="input-group">
+                <label>Full Name</label>
+                <input type="text" id="reg-name" placeholder="John Doe">
+            </div>
+            <div class="input-group">
+                <label>Email Address</label>
+                <input type="email" id="reg-email" placeholder="john@example.com">
+            </div>
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" id="reg-pass" placeholder="••••••••">
+            </div>
+            <div class="input-group">
+                <label>Confirm Password</label>
+                <input type="password" id="reg-cpass" placeholder="••••••••">
+            </div>
+            
+            <button onclick="handleRegister()">Sign Up</button>
+            
+            <p class="toggle-text">
+                Already have an account? 
+                <span class="toggle-link" onclick="toggleForm('login')">Log In</span>
+            </p>
+        </div>
+
+        <!-- Login Form -->
+        <div id="login-box" class="hidden">
+            <h2>Welcome Back</h2>
+            <p class="subtitle">Please enter your details to sign in.</p>
+            
+            <div class="input-group">
+                <label>Email Address</label>
+                <input type="email" id="login-email" placeholder="john@example.com">
+            </div>
+            <div class="input-group">
+                <label>Password</label>
+                <input type="password" id="login-pass" placeholder="••••••••">
+            </div>
+            
+            <button onclick="handleLogin()">Sign In</button>
+            
+            <p class="toggle-text">
+                Don't have an account? 
+                <span class="toggle-link" onclick="toggleForm('register')">Sign Up</span>
+            </p>
+        </div>
+
+        <div id="auth-msg" class="msg"></div>
+    </div>
+
+    <!-- DASHBOARD CARD -->
+    <div id="dash-card" class="card hidden">
+        <div class="dashboard">
+            <div id="user-initials" class="user-avatar">JD</div>
+            <h2 id="dash-welcome">Welcome, John!</h2>
+            <p id="dash-email" class="subtitle">john@example.com</p>
+            
+            <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 16px; margin-top: 20px; text-align: left;">
+                <h4 style="margin-bottom: 10px; color: var(--primary);">Security Status</h4>
+                <p style="font-size: 14px; color: var(--success);">● Your account is fully protected.</p>
+            </div>
+
+            <button class="logout-btn" onclick="logout()">Sign Out</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    const API_BASE = window.location.origin;
+    const authMsg = document.getElementById('auth-msg');
+
+    function showMsg(text, type) {
+        authMsg.innerText = text;
+        authMsg.className = 'msg ' + type;
+        setTimeout(() => {
+            if (type === 'success') authMsg.className = 'msg';
+        }, 5000);
+    }
+
+    function toggleForm(type) {
+        const regBox = document.getElementById('register-box');
+        const loginBox = document.getElementById('login-box');
+        authMsg.className = 'msg';
+
+        if (type === 'login') {
+            regBox.classList.add('hidden');
+            loginBox.classList.remove('hidden');
+        } else {
+            loginBox.classList.add('hidden');
+            regBox.classList.remove('hidden');
+        }
+    }
+
+    async function handleRegister() {
+        const name = document.getElementById('reg-name').value;
+        const email = document.getElementById('reg-email').value;
+        const pass = document.getElementById('reg-pass').value;
+        const cpass = document.getElementById('reg-cpass').value;
+
+        if (!name || !email || !pass || !cpass) {
+            return showMsg('Please fill all fields', 'error');
+        }
+
+        if (pass !== cpass) {
+            return showMsg('Passwords do not match', 'error');
+        }
+
+        const fd = new FormData();
+        fd.append('name', name);
+        fd.append('email', email);
+        fd.append('password', pass);
+        fd.append('confirm_password', cpass);
+
+        try {
+            const res = await fetch(`${API_BASE}/register`, { method: 'POST', body: fd });
+            const data = await res.json();
+
+            if (res.ok) {
+                showMsg('Registration successful! Redirecting to login...', 'success');
+                setTimeout(() => {
+                    document.getElementById('login-email').value = email;
+                    toggleForm('login');
+                }, 1500);
+            } else {
+                showMsg(data.detail || 'Registration failed', 'error');
+            }
+        } catch (e) {
+            showMsg('Server connection failed', 'error');
+        }
+    }
+
+    async function handleLogin() {
+        const email = document.getElementById('login-email').value;
+        const pass = document.getElementById('login-pass').value;
+
+        if (!email || !pass) {
+            return showMsg('Please provide email and password', 'error');
+        }
+
+        const fd = new FormData();
+        fd.append('email', email);
+        fd.append('password', pass);
+
+        try {
+            const res = await fetch(`${API_BASE}/login`, { method: 'POST', body: fd });
+            const data = await res.json();
+
+            if (res.ok) {
+                renderDashboard(data.user);
+            } else {
+                showMsg(data.detail || 'Login failed', 'error');
+            }
+        } catch (e) {
+            showMsg('Server connection failed', 'error');
+        }
+    }
+
+    function renderDashboard(user) {
+        document.getElementById('auth-card').classList.add('hidden');
+        document.getElementById('dash-card').classList.remove('hidden');
+        document.getElementById('dash-card').classList.add('animate');
+        
+        document.getElementById('dash-welcome').innerText = `Welcome, ${user.name}!`;
+        document.getElementById('dash-email').innerText = user.email;
+        document.getElementById('user-initials').innerText = user.name.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2);
+    }
+
+    function logout() {
+        document.getElementById('dash-card').classList.add('hidden');
+        document.getElementById('auth-card').classList.remove('hidden');
+        document.getElementById('auth-card').classList.add('animate');
+        document.getElementById('login-pass').value = '';
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Your Second Brain</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#7f0df2",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#191022",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#2a1d3a",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                    backgroundImage: {
+                        'hero-gradient': 'radial-gradient(ellipse at top right, rgba(127, 13, 242, 0.15), transparent 70%)',
+                        'hero-gradient-dark': 'radial-gradient(ellipse at top right, rgba(127, 13, 242, 0.3), transparent 70%)',
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0;
+            /* Hidden by default */
+        }
+
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .delay-100 {
+            animation-delay: 0.1s;
+        }
+
+        .delay-200 {
+            animation-delay: 0.2s;
+        }
+
+        .delay-300 {
+            animation-delay: 0.3s;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-50 font-display transition-colors duration-300">
+    <div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+        <nav
+            class="sticky top-0 z-50 w-full border-b border-[#f2f0f5] dark:border-white/10 bg-white/80 dark:bg-[#191022]/80 backdrop-blur-md">
+            <div class="flex justify-center w-full px-4 sm:px-10 py-3">
+                <div class="flex w-full max-w-[1280px] items-center justify-between">
+                    <div class="flex items-center gap-4 text-slate-900 dark:text-white">
+                        <img src="logo.png" alt="Logo" class="h-10 w-auto object-contain" />
+                        <span class="text-xl font-bold tracking-tight">Freedy AI</span>
+                    </div>
+
+                    <!-- Auth Actions (Login/Register) - REMOVED -->
+                    <div id="authActions" class="hidden">
+                    </div>
+
+                    <!-- User Profile - REMOVED -->
+                    <div id="userProfile" class="hidden">
+                    </div>
+
+                    <button class="md:hidden text-slate-900 dark:text-white">
+                        <span class="material-symbols-outlined">menu</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <section
+            class="relative flex flex-col justify-center py-12 md:py-20 lg:py-28 px-4 sm:px-10 bg-hero-gradient dark:bg-hero-gradient-dark bg-no-repeat bg-top">
+            <div class="mx-auto w-full max-w-[1280px] flex flex-col lg:flex-row gap-12 items-center">
+                <div class="flex flex-col gap-8 flex-1 text-center lg:text-left">
+                    <div class="flex flex-col gap-4">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 w-fit mx-auto lg:mx-0 border border-primary/20">
+                            <span class="flex size-2 rounded-full bg-primary animate-pulse"></span>
+                            <span class="text-xs font-bold text-primary uppercase tracking-wide">Version 2.0 Live</span>
+                        </div>
+                        <h1
+                            class="text-4xl sm:text-5xl lg:text-7xl font-black leading-[1.1] tracking-[-0.033em] text-slate-900 dark:text-white animate-fade-in-up delay-100">
+                            Your Second Brain, <br />
+                            <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-400">Supercharged
+                                by AI.</span>
+                        </h1>
+                        <h2
+                            class="text-lg sm:text-xl font-normal leading-relaxed text-slate-600 dark:text-slate-300 max-w-2xl mx-auto lg:mx-0 animate-fade-in-up delay-200">
+                            Your dedicated AI companion for academic success. Get instant answers, organize your
+                            schedule, and ace your exams with a personalized study assistant.
+                        </h2>
+                    </div>
+                    <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
+                        <!-- Linked to login.html -->
+                        <a href="chat.html"
+                            class="flex items-center justify-center rounded-lg h-12 px-8 bg-primary hover:bg-primary/90 transition-all text-white text-base font-bold shadow-xl shadow-primary/25 hover:scale-105 active:scale-95 animate-fade-in-up delay-300">
+                            <span class="truncate">Try for Free</span>
+                        </a>
+
+
+                    </div>
+
+                </div>
+                <div class="flex-1 w-full lg:w-auto relative group animate-float">
+                    <div
+                        class="absolute -inset-1 bg-gradient-to-r from-primary to-purple-400 rounded-xl blur opacity-25 group-hover:opacity-40 transition duration-1000 group-hover:duration-200">
+                    </div>
+                    <div class="relative w-full aspect-[4/3] bg-slate-100 dark:bg-surface-dark rounded-xl overflow-hidden shadow-2xl border border-slate-200 dark:border-white/10 flex items-center justify-center bg-cover bg-center"
+                        data-alt="Abstract 3D purple wave visualizing AI data flow"
+                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuASu-muh1mI2S3-gwBRRmTXYkaLDLJWfa0wXj84oFlksb6W5PIZDgWLJp3AsILq0i2nSC5m_5ULW1z4YET-EmWSwozK6KUOzggeqO8K24OV9rAEztPkqO4rO-VJEOe_WRS8wjxx1cKoOQRojQrV2aqJzxhOB08tCyJvwp38-PGI8ENb7_vvcxyga6_YJ09FBVYHuolZTn-PQs0hj9kN6PCoFGikHnua9_Vsg7tGYfDmcpY-719sLIg9wLtQArV-CexudZ1IgxD7xn0");'>
+                        <div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+                        <div
+                            class="absolute bottom-6 left-6 right-6 p-4 bg-white/90 dark:bg-[#191022]/90 backdrop-blur-sm rounded-lg border border-white/20 shadow-lg transform transition-transform group-hover:-translate-y-2">
+                            <div class="flex items-center gap-3 mb-2">
+                                <div class="size-2 rounded-full bg-red-500"></div>
+                                <div class="size-2 rounded-full bg-yellow-500"></div>
+                                <div class="size-2 rounded-full bg-green-500"></div>
+                            </div>
+                            <div class="space-y-2">
+                                <div class="h-2 w-3/4 bg-slate-200 dark:bg-slate-700 rounded"></div>
+                                <div class="h-2 w-1/2 bg-slate-200 dark:bg-slate-700 rounded"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer
+            class="bg-white dark:bg-[#120b18] border-t border-slate-100 dark:border-white/5 pt-16 pb-8 px-4 sm:px-10">
+            <div class="mx-auto w-full max-w-[1280px] flex flex-col gap-12">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
+                    <div class="col-span-2 md:col-span-1 flex flex-col gap-4">
+                        <div class="flex items-center gap-2 text-slate-900 dark:text-white">
+                            <div class="size-6 flex items-center justify-center rounded bg-primary/20 text-primary">
+                                <span class="material-symbols-outlined text-sm">smart_toy</span>
+                            </div>
+                            <h3 class="font-bold text-lg"></h3>
+                        </div>
+                        <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                            Empowering the world to create, solve, and innovate faster than ever before.
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="text-slate-900 dark:text-white font-bold">Product</h4>
+                        <div class="flex flex-col gap-2">
+                            <a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm"
+                                href="#">Features</a>
+                            <a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm"
+                                href="#">Integrations</a>
+                            <a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm"
+                                href="#">Pricing</a>
+                            <a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm"
+                                href="#">Changelog</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="text-slate-900 dark:text-white font-bold">Company</h4>
+                        <div class="flex flex-col gap-2">
+                            <a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm" href="#">About
+                                Us</a>
+                            <a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm"
+                                href="#">Careers</a>
+                            <a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm" href="#">Blog</a>
+                            <a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm"
+                                href="#">Contact</a>
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <h4 class="text-slate-900 dark:text-white font-bold">Legal</h4>
+                        <div class="flex flex-col gap-2">
+                            <a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm" href="#">Privacy
+                                Policy</a>
+                            <a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm" href="#">Terms of
+                                Service</a>
+                            <a class="text-slate-500 dark:text-slate-400 hover:text-primary text-sm" href="#">Cookie
+                                Policy</a>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="flex flex-col md:flex-row justify-between items-center gap-4 border-t border-slate-100 dark:border-white/5 pt-8">
+                    <p class="text-slate-400 dark:text-slate-600 text-sm">© 2023 AI Assistant Inc. All rights reserved.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="text-slate-400 hover:text-primary transition-colors" href="#">
+                            <span class="sr-only">Twitter</span>
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
+                                </path>
+                            </svg>
+                        </a>
+                        <a class="text-slate-400 hover:text-primary transition-colors" href="#">
+                            <span class="sr-only">GitHub</span>
+                            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path clip-rule="evenodd"
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function readPage() {
+            if (!window.speechSynthesis) return;
+
+            // Ensure voices are loaded
+            let voices = window.speechSynthesis.getVoices();
+            if (voices.length === 0) {
+                window.speechSynthesis.onvoiceschanged = () => {
+                    voices = window.speechSynthesis.getVoices();
+                    playSpeech(voices);
+                };
+            } else {
+                playSpeech(voices);
+            }
+        }
+
+        function getGreeting() {
+            const hour = new Date().getHours();
+            if (hour < 12) return "Good Morning";
+            if (hour < 18) return "Good Afternoon";
+            return "Good Evening";
+        }
+
+        function playSpeech(voices) {
+            // Get text content
+            const h1 = document.querySelector('h1').innerText;
+            const h2 = document.querySelector('h2').innerText;
+
+            // Dynamic Greeting
+            const greeting = getGreeting();
+            const textToRead = `${greeting}, I am Friday Assistant. Welcome to Your Second Brain. ${h1}. ${h2}. Click Try for Free to start.`;
+
+            // Cancel any ongoing speech
+            window.speechSynthesis.cancel();
+
+            const utterance = new SpeechSynthesisUtterance(textToRead);
+            utterance.lang = "en-US";
+
+            // Friday Persona Tuning
+            utterance.pitch = 1.2;
+            utterance.rate = 1.05;
+            utterance.volume = 1.0;
+
+            // Voice Selection (Strict Female Priority)
+            const preferredVoice = voices.find(v =>
+                (v.name.includes("Google US English") && !v.name.includes("Male")) ||
+                v.name.includes("Microsoft Zira") ||
+                v.name.includes("Samantha") ||
+                (v.name.includes("Female") && v.lang.startsWith("en"))
+            );
+
+            if (preferredVoice) {
+                console.log("Friday Voice Selected:", preferredVoice.name);
+                utterance.voice = preferredVoice;
+            }
+
+            window.speechSynthesis.speak(utterance);
+        }
+
+        // Auto-speech on load
+        window.addEventListener('load', () => {
+            // Small delay for stability
+            setTimeout(readPage, 500);
+        });
+    </script>
+</body>
+
+</html>

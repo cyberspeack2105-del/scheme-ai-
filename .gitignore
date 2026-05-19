@@ -1,0 +1,44 @@
+# Node directories
+node_modules/
+jspm_packages/
+dist/
+build/
+
+# Python directories
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+
+# Secrets/Logs
+.env
+.env.*
+!.env.example
+*.log
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Project specific
+uploads/
+data/
+backup/
+*.docx
+*.pdf
+# Excluding documents that might not be needed in repo
+Seminar_Report_Tharagh_2k26.html
+Seminar_Report_Tharagh_2k26.md
+project_report.html
+dfd.docx
+dfd.pdf
+project_abstract.txt
+Explanation_For_Students.md

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>AI Chat - Your Second Brain</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#7f0df2",
+                        "background-light": "#f7f5f8",
+                        "background-dark": "#191022",
+                        "surface-light": "#ffffff",
+                        "surface-dark": "#2a1d3a",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                    backgroundImage: {
+                        'hero-gradient': 'radial-gradient(ellipse at top right, rgba(127, 13, 242, 0.15), transparent 70%)',
+                        'hero-gradient-dark': 'radial-gradient(ellipse at top right, rgba(127, 13, 242, 0.3), transparent 70%)',
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background-color: rgba(127, 13, 242, 0.2);
+            border-radius: 20px;
+        }
+
+        .pulse-ring {
+            box-shadow: 0 0 0 0 rgba(127, 13, 242, 0.7);
+            animation: pulse-ring 1.5s infinite cubic-bezier(0.66, 0, 0, 1);
+        }
+
+        @keyframes pulse-ring {
+            to {
+                box-shadow: 0 0 0 10px rgba(127, 13, 242, 0);
+            }
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-50 font-display transition-colors duration-300 h-screen flex flex-col overflow-hidden">
+
+    <!-- Navbar -->
+    <nav
+        class="sticky top-0 z-50 w-full border-b border-[#f2f0f5] dark:border-white/10 bg-white/80 dark:bg-[#191022]/80 backdrop-blur-md">
+        <div class="flex justify-center w-full px-4 sm:px-10 py-3">
+            <div class="flex w-full max-w-[1280px] items-center justify-between">
+                <div class="flex items-center gap-4 text-slate-900 dark:text-white">
+                    <div class="size-8 flex items-center justify-center rounded bg-primary/10 text-primary">
+                        <span class="material-symbols-outlined text-xl">smart_toy</span>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <a href="index.html"
+                        class="text-sm font-medium hover:text-primary transition-colors text-slate-600 dark:text-slate-300 flex items-center gap-2">
+                        <span class="material-symbols-outlined text-lg">arrow_back</span>
+                        Back to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-1 w-full max-w-[1000px] mx-auto p-4 md:p-6 flex flex-col gap-6 overflow-hidden">
+
+        <!-- Chat Container -->
+        <div
+            class="flex-1 flex flex-col bg-white dark:bg-surface-dark rounded-2xl shadow-xl border border-slate-200 dark:border-white/10 overflow-hidden relative">
+
+            <!-- Chat Header -->
+            <div class="bg-primary/5 p-4 flex items-center justify-between border-b border-primary/10">
+                <div class="flex items-center gap-3">
+                    <div
+                        class="size-10 rounded-full bg-gradient-to-br from-primary to-purple-400 flex items-center justify-center text-white shadow-md">
+                        <span class="material-symbols-outlined">smart_toy</span>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-900 dark:text-white leading-tight">AI Assistant</h3>
+                        <div class="flex items-center gap-1.5">
+                            <span class="relative flex size-2">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full size-2 bg-green-400"></span>
+                            </span>
+                            <span class="text-xs font-medium text-slate-500 dark:text-slate-400">Online & Ready</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Language Select -->
+                <select id="langSelect"
+                    class="bg-white dark:bg-background-dark border border-slate-200 dark:border-white/10 text-slate-700 dark:text-slate-300 text-xs rounded-lg py-2 pl-3 pr-8 focus:ring-primary focus:border-primary outline-none cursor-pointer">
+                    <option value="en-US">English</option>
+                    <option value="ta-IN">தமிழ்</option>
+                    <option value="ml-IN">മലയാളം</option>
+                </select>
+            </div>
+
+            <!-- Messages Area -->
+            <div id="chatBox"
+                class="flex-1 p-6 overflow-y-auto custom-scrollbar flex flex-col gap-6 bg-slate-50/50 dark:bg-[#150d1e]/50">
+                <!-- Welcome Message -->
+
+            </div>
+
+            <!-- Input Area -->
+            <div class="p-4 bg-white dark:bg-surface-dark border-t border-slate-200 dark:border-white/10">
+                <div class="relative flex items-center gap-2 max-w-[800px] mx-auto">
+                    <button id="micBtn" onclick="toggleVoice()"
+                        class="size-10 rounded-full flex items-center justify-center text-slate-400 hover:text-primary hover:bg-slate-100 dark:hover:bg-white/5 transition-all">
+                        <span class="material-symbols-outlined">mic</span>
+                    </button>
+
+                    <div class="relative flex-1">
+                        <input id="userInput" type="text"
+                            class="w-full pl-5 pr-12 py-3 bg-slate-100 dark:bg-background-dark border-none rounded-xl text-slate-900 dark:text-white placeholder:text-slate-400 focus:ring-2 focus:ring-primary/50 transition-all"
+                            placeholder="Type your question or use voice..." />
+
+                        <button onclick="sendMessage()"
+                            class="absolute right-2 top-1/2 -translate-y-1/2 p-1.5 bg-primary text-white rounded-lg shadow-lg shadow-primary/30 hover:bg-primary/90 transition-all hover:scale-105 active:scale-95">
+                            <span class="material-symbols-outlined text-lg leading-none">arrow_upward</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="mt-2 text-center">
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Chat Logic (Preserved) -->
+    <script>
+        const API_URL = "http://127.0.0.1:8008/ask";
+
+        function cleanTextForSpeech(text) {
+            // Remove Markdown symbols for speech
+            return text
+                .replace(/\*\*/g, '')         // Bold
+                .replace(/\*/g, '')           // Italic
+                .replace(/`/g, '')            // Code/Codeblock
+                .replace(/#+/g, '')           // Headers
+                .replace(/\[([^\]]+)\]\([^\)]+\)/g, '$1') // Links (keep text)
+                .replace(/\n/g, ' ');         // Newlines to spaces
+        }
+
+
+
+        // Auth Check & User Avatar
+        // Auth Check & User Avatar
+        const currentUser = localStorage.getItem('user') || 'Explorer';
+        const currentUserImage = localStorage.getItem('image_url');
+
+        function addMessage(text, sender) {
+            const chatBox = document.getElementById("chatBox");
+
+            const div = document.createElement("div");
+            div.className = `flex gap-3 max-w-[90%] ${sender === "user" ? "ml-auto flex-row-reverse" : ""} animate-slide-in-up`;
+
+            const avatar = document.createElement("div");
+            avatar.className = `size-8 rounded-full flex items-center justify-center text-white shadow-sm shrink-0 ${sender === "user" ? "bg-slate-500" : "bg-gradient-to-br from-primary to-purple-400"} overflow-hidden`;
+
+            if (sender === "user" && currentUserImage) {
+                const img = document.createElement("img");
+                img.src = currentUserImage;
+                img.alt = "User";
+                img.className = "w-full h-full object-cover";
+                avatar.appendChild(img);
+            } else {
+                avatar.innerHTML = `<span class="material-symbols-outlined text-sm">${sender === "user" ? "person" : "smart_toy"}</span>`;
+            }
+
+            const msgContent = document.createElement("div");
+            msgContent.className = "flex flex-col gap-1 items-start";
+            if (sender === "user") {
+                msgContent.className = "flex flex-col gap-1 items-end";
+            }
+
+            const timestamp = document.createElement("span");
+            timestamp.className = `text-[10px] text-slate-500 ${sender === "user" ? "mr-1" : "ml-1"}`;
+            const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+            timestamp.innerText = `${sender === "user" ? "You" : "Friday"} • ${time}`;
+
+            const bubble = document.createElement("div");
+            if (sender === "user") {
+                bubble.className = "bg-primary text-white p-3 rounded-2xl rounded-tr-none shadow-md text-sm leading-relaxed";
+                bubble.innerText = text;
+            } else {
+                bubble.className = "bg-white dark:bg-surface-dark border border-slate-100 dark:border-white/5 p-3 rounded-2xl rounded-tl-none shadow-sm text-sm text-slate-700 dark:text-slate-200 leading-relaxed prose prose-sm dark:prose-invert max-w-none";
+                // Parse Markdown for Bot messages
+                bubble.innerHTML = typeof marked !== 'undefined' ? marked.parse(text) : text;
+            }
+
+            msgContent.appendChild(timestamp);
+            msgContent.appendChild(bubble);
+
+            div.appendChild(avatar);
+            div.appendChild(msgContent);
+
+            chatBox.appendChild(div);
+            // Auto-scroll
+            chatBox.scrollTop = chatBox.scrollHeight;
+
+            // Trigger speech for bot messages
+            if (sender === "bot") {
+                const cleanText = cleanTextForSpeech(text);
+                speakText(cleanText);
+            }
+        }
+
+        function sendMessage() {
+            const input = document.getElementById("userInput");
+            const message = input.value.trim();
+            const langSelect = document.getElementById("langSelect"); // Get language selection
+
+            if (message === "") return;
+
+            addMessage(message, "user");
+            input.value = "";
+
+            // Show typing indicator logic could go here
+
+            // Dictionary to map codes to language names for the AI prompt
+            const langMap = {
+                "ta-IN": "Tamil",
+                "ml-IN": "Malayalam",
+                "en-US": "English"
+            };
+
+            const selectedLangName = langMap[langSelect.value] || "English";
+
+            fetch(API_URL, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    prompt: message,
+                    language: selectedLangName
+                })
+            })
+                .then(async response => {
+                    const data = await response.json();
+                    if (!response.ok) {
+                        throw new Error(data.detail || "Server error");
+                    }
+                    addMessage(data.answer, "bot");
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                    addMessage("❌ " + error.message, "bot");
+                });
+        }
+
+        // Send message on Enter key
+        document.getElementById("userInput").addEventListener("keypress", function (e) {
+            if (e.key === "Enter") {
+                sendMessage();
+            }
+        });
+
+        /* ================== VOICE LOGIC ================== */
+        let recognition = null;
+        let isListening = false;
+        const micBtn = document.getElementById("micBtn");
+        const langSelect = document.getElementById("langSelect");
+
+        if ('webkitSpeechRecognition' in window || 'SpeechRecognition' in window) {
+            recognition = new (window.SpeechRecognition || window.webkitSpeechRecognition)();
+            recognition.continuous = false;
+            recognition.interimResults = false;
+
+            recognition.onstart = () => {
+                isListening = true;
+                micBtn.classList.add("text-primary", "bg-primary/10", "pulse-ring");
+                document.getElementById("userInput").placeholder = "Listening...";
+            };
+
+            recognition.onend = () => {
+                isListening = false;
+                micBtn.classList.remove("text-primary", "bg-primary/10", "pulse-ring");
+                document.getElementById("userInput").placeholder = "Type your question or use voice...";
+            };
+
+            recognition.onresult = (event) => {
+                const transcript = event.results[0][0].transcript;
+                document.getElementById("userInput").value = transcript;
+                sendMessage(); // Auto-send after speaking
+            };
+
+            recognition.onerror = (event) => {
+                console.error("Speech error", event);
+                isListening = false;
+                micBtn.classList.remove("text-primary", "bg-primary/10", "pulse-ring");
+            };
+        } else {
+            console.warn("Speech recognition not supported");
+            micBtn.style.display = "none";
+        }
+
+        function toggleVoice() {
+            if (!recognition) return;
+
+            if (isListening) {
+                recognition.stop();
+            } else {
+                recognition.lang = langSelect.value;
+                recognition.start();
+            }
+        }
+
+        function speakText(text) {
+            if (!window.speechSynthesis) return;
+
+            // Ensure voices are loaded
+            let voices = window.speechSynthesis.getVoices();
+            if (voices.length === 0) {
+                window.speechSynthesis.onvoiceschanged = () => {
+                    voices = window.speechSynthesis.getVoices();
+                    playSpeech(text, voices);
+                };
+            } else {
+                playSpeech(text, voices);
+            }
+        }
+
+        function playSpeech(text, voices) {
+            // Cancel any ongoing speech
+            window.speechSynthesis.cancel();
+
+            const utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = langSelect.value;
+
+            // Friday Persona Tuning (Female, Professional, Crisp)
+            // Pitch: Higher (~1.1 - 1.2), Rate: Slightly fast (~1.05 - 1.1)
+            utterance.pitch = 1.2;
+            utterance.rate = 1.05;
+            utterance.volume = 1.0;
+
+            // 1. Try to find a voice matching the SELECTED language (e.g., ta-IN)
+            let selectedVoice = voices.find(v => v.lang === langSelect.value || v.lang.startsWith(langSelect.value.split('-')[0]));
+
+            // 2. If filtering for English, or if no specific language voice found, apply "Friday" persona preferences
+            if (!selectedVoice || langSelect.value.startsWith('en')) {
+                const fridayVoice = voices.find(v =>
+                    (v.name.includes("Google US English") && !v.name.includes("Male")) ||
+                    v.name.includes("Microsoft Zira") ||
+                    v.name.includes("Samantha") ||
+                    (v.name.includes("Female") && v.lang.startsWith("en"))
+                );
+                if (fridayVoice) selectedVoice = fridayVoice;
+            }
+
+            if (selectedVoice) {
+                console.log("Using voice:", selectedVoice.name, "for lang:", utterance.lang);
+                utterance.voice = selectedVoice;
+            }
+
+            window.speechSynthesis.speak(utterance);
+        }
+
+
+
+        function getGreeting() {
+            const hour = new Date().getHours();
+            if (hour < 12) return "Good Morning";
+            if (hour < 18) return "Good Afternoon";
+            return "Good Evening";
+        }
+
+        // Auto-Speech on Load
+        window.addEventListener('load', () => {
+            const greeting = getGreeting();
+            const newText = `${greeting}, I am Friday Assistant. You can type your questions below, or click the microphone button to speak with me directly.`;
+
+            // Add as a new message instead of hijacking existing elements
+            // But wait to not conflict with animation
+            setTimeout(() => {
+                addMessage(newText, "bot");
+            }, 500);
+        });
+
+        // Autoplay policy fallback: Unlock audio on first interaction
+        document.body.addEventListener('click', () => {
+            // Basic silent utterance to unlock audio context if needed
+            if (window.speechSynthesis.paused) window.speechSynthesis.resume();
+        }, { once: true });
+    </script>
+    <style>
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes ripple {
+            0% {
+                box-shadow: 0 0 0 0 rgba(127, 13, 242, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(127, 13, 242, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(127, 13, 242, 0);
+            }
+        }
+
+        .animate-slide-in-up {
+            animation: slideInUp 0.3s ease-out forwards;
+        }
+
+        .pulse-ring {
+            animation: ripple 1.5s infinite;
+        }
+    </style>
+</body>
+
+</html>
