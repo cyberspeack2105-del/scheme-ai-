@@ -12,13 +12,25 @@ const app = express();
 
 // Enable CORS for React frontend (Vite local and Vercel domains)
 app.use(cors({
-  origin: [
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
-    "https://rootnexus.vercel.app",
-    "https://secure-data-collection-portal-with-ai-scheme-recommadation-system.vercel.app",
-    "https://secure-data-collection-portal-with-ai.onrender.com"
-  ],
+  origin: function (origin, callback) {
+    // Allow requests with no origin (like mobile apps or curl requests)
+    if (!origin) return callback(null, true);
+    
+    const allowedOrigins = [
+      "http://localhost:5173",
+      "http://127.0.0.1:5173",
+      "https://rootnexus.vercel.app",
+      "https://secure-data-collection-portal-with-ai-scheme-recommadation-system.vercel.app",
+      "https://secure-data-collection-portal-with-ai.onrender.com"
+    ];
+    
+    // Check if origin matches allowed list or ends with .vercel.app
+    if (allowedOrigins.includes(origin) || origin.endsWith('.vercel.app')) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true,
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization", "X-Requested-With"]
