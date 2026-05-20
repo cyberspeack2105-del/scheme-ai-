@@ -49,6 +49,8 @@ connectDB().catch(err => {
 });
 
 // Root check route
+app.get('/api/ping', (req, res) => res.status(200).json({ status: 'pong' }));
+
 app.get('/api', (req, res) => {
   res.status(200).json({ message: "Root Nexus Scheme Recommendation API is running successfully!" });
 });
