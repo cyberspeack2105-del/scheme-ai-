@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const connectDB = async () => {
   try {
     // Use only the MongoDB Atlas URL directly as requested
-    const mongoUrl = 'mongodb+srv://raju:kanthalloor123@cluster0.dsttruk.mongodb.net/kanthalloor_db?appName=Cluster0';
+    const mongoUrl = 'mongodb+srv://login:raju2105@cluster0.vwgar5v.mongodb.net/kanthalloor_db?appName=Cluster0';
 
     await mongoose.connect(mongoUrl, {
       serverSelectionTimeoutMS: 5000,
