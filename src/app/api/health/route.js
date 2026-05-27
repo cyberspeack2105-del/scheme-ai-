@@ -15,7 +15,7 @@ export async function GET() {
   
   return NextResponse.json({
     status: status,
-    database_host: process.env.MONGO_URL ? "Atlas Connected" : "Local/Other",
+    database_host: (process.env.MONGO_URL || process.env.MONGODB_URL || process.env.MONGODB_URI) ? "Atlas Connected" : "Local/Other",
     collection: "users"
   });
 }
