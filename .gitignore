@@ -42,3 +42,8 @@ dfd.docx
 dfd.pdf
 project_abstract.txt
 Explanation_For_Students.md
+
+# Next.js
+.next/
+out/
+

@@ -78,7 +78,7 @@ const MockInterviewModal = ({ isOpen, onClose, role }) => {
         setMessages([{ role: 'system', content: `Starting ${mode === 'intro' ? 'Self-Introduction Coach' : 'Mock Interview'} for ${role}...` }]);
         setIsLoading(true);
         try {
-            const res = await axios.post(`${import.meta.env.VITE_API_URL || '${API_URL}'}/interview/start`, { role, mode });
+            const res = await axios.post(`${API_URL}/interview/start`, { role, mode });
             const question = res.data.question;
             setCurrentQuestion(question);
             setMessages(prev => [...prev, { role: 'bot', content: question }]);
@@ -103,7 +103,7 @@ const MockInterviewModal = ({ isOpen, onClose, role }) => {
         setIsLoading(true);
 
         try {
-            const res = await axios.post(`${import.meta.env.VITE_API_URL || '${API_URL}'}/interview/submit`, {
+            const res = await axios.post(`${API_URL}/interview/submit`, {
                 role,
                 question: currentQuestion,
                 answer,

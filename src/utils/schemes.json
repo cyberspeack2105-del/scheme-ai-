@@ -1,0 +1,702 @@
+[
+  {
+    "scheme_id":1,
+    "scheme_name":"Pradhan Mantri Jan Dhan Yojana",
+    "scheme_type":"Government",
+    "description":"Zero balance bank accounts for financial inclusion",
+    "official_link":"https:\/\/pmjdy.gov.in"
+  },
+  {
+    "scheme_id":2,
+    "scheme_name":"Ayushman Bharat Yojana",
+    "scheme_type":"Government",
+    "description":"Health insurance up to 5 lakh per family",
+    "official_link":"https:\/\/pmjay.gov.in"
+  },
+  {
+    "scheme_id":3,
+    "scheme_name":"PM Kisan Samman Nidhi",
+    "scheme_type":"Government",
+    "description":"Income support for farmers",
+    "official_link":"https:\/\/pmkisan.gov.in"
+  },
+  {
+    "scheme_id":4,
+    "scheme_name":"PM Awas Yojana Rural",
+    "scheme_type":"Government",
+    "description":"Housing assistance for rural poor",
+    "official_link":"https:\/\/pmayg.nic.in"
+  },
+  {
+    "scheme_id":5,
+    "scheme_name":"PM Awas Yojana Urban",
+    "scheme_type":"Government",
+    "description":"Affordable housing for urban poor",
+    "official_link":"https:\/\/pmaymis.gov.in"
+  },
+  {
+    "scheme_id":6,
+    "scheme_name":"PM Ujjwala Yojana",
+    "scheme_type":"Government",
+    "description":"Free LPG gas connections",
+    "official_link":"https:\/\/www.pmuy.gov.in"
+  },
+  {
+    "scheme_id":7,
+    "scheme_name":"Atal Pension Yojana",
+    "scheme_type":"Government",
+    "description":"Pension scheme for unorganized workers",
+    "official_link":"https:\/\/www.npscra.nsdl.co.in"
+  },
+  {
+    "scheme_id":8,
+    "scheme_name":"MGNREGA",
+    "scheme_type":"Government",
+    "description":"Guaranteed wage employment in rural areas",
+    "official_link":"https:\/\/nrega.nic.in"
+  },
+  {
+    "scheme_id":9,
+    "scheme_name":"PM Kaushal Vikas Yojana",
+    "scheme_type":"Government",
+    "description":"Skill development for youth",
+    "official_link":"https:\/\/www.pmkvyofficial.org"
+  },
+  {
+    "scheme_id":10,
+    "scheme_name":"MUDRA Loan Scheme",
+    "scheme_type":"Government",
+    "description":"Loans for micro businesses",
+    "official_link":"https:\/\/www.mudra.org.in"
+  },
+  {
+    "scheme_id":11,
+    "scheme_name":"Beti Bachao Beti Padhao",
+    "scheme_type":"Government",
+    "description":"Girl child welfare and education",
+    "official_link":"https:\/\/wcd.nic.in"
+  },
+  {
+    "scheme_id":12,
+    "scheme_name":"PM Fasal Bima Yojana",
+    "scheme_type":"Government",
+    "description":"Crop insurance for farmers",
+    "official_link":"https:\/\/pmfby.gov.in"
+  },
+  {
+    "scheme_id":13,
+    "scheme_name":"National Old Age Pension Scheme",
+    "scheme_type":"Government",
+    "description":"Pension for senior citizens",
+    "official_link":"https:\/\/nsap.nic.in"
+  },
+  {
+    "scheme_id":14,
+    "scheme_name":"National Disability Pension Scheme",
+    "scheme_type":"Government",
+    "description":"Pension for persons with disabilities",
+    "official_link":"https:\/\/nsap.nic.in"
+  },
+  {
+    "scheme_id":15,
+    "scheme_name":"National Widow Pension Scheme",
+    "scheme_type":"Government",
+    "description":"Pension assistance for widows",
+    "official_link":"https:\/\/nsap.nic.in"
+  },
+  {
+    "scheme_id":16,
+    "scheme_name":"Skill India Mission",
+    "scheme_type":"Government",
+    "description":"National skill development program",
+    "official_link":"https:\/\/skillindia.gov.in"
+  },
+  {
+    "scheme_id":17,
+    "scheme_name":"Startup India",
+    "scheme_type":"Government",
+    "description":"Support for startups",
+    "official_link":"https:\/\/www.startupindia.gov.in"
+  },
+  {
+    "scheme_id":18,
+    "scheme_name":"Sukanya Samriddhi Yojana",
+    "scheme_type":"Government",
+    "description":"Savings scheme for girl child",
+    "official_link":"https:\/\/www.india.gov.in"
+  },
+  {
+    "scheme_id":19,
+    "scheme_name":"Digital India Programme",
+    "scheme_type":"Government",
+    "description":"Digital services and infrastructure",
+    "official_link":"https:\/\/digitalindia.gov.in"
+  },
+  {
+    "scheme_id":20,
+    "scheme_name":"Jal Jeevan Mission",
+    "scheme_type":"Government",
+    "description":"Tap water connections to households",
+    "official_link":"https:\/\/jaljeevanmission.gov.in"
+  },
+  {
+    "scheme_id":21,
+    "scheme_name":"Swachh Bharat Mission",
+    "scheme_type":"Government",
+    "description":"Sanitation and cleanliness drive",
+    "official_link":"https:\/\/swachhbharatmission.gov.in"
+  },
+  {
+    "scheme_id":22,
+    "scheme_name":"PM SVANidhi",
+    "scheme_type":"Government",
+    "description":"Loan support for street vendors",
+    "official_link":"https:\/\/pmsvanidhi.mohua.gov.in"
+  },
+  {
+    "scheme_id":23,
+    "scheme_name":"E-Shram Portal",
+    "scheme_type":"Government",
+    "description":"Social security for unorganized workers",
+    "official_link":"https:\/\/eshram.gov.in"
+  },
+  {
+    "scheme_id":24,
+    "scheme_name":"National Scholarship Portal",
+    "scheme_type":"Government",
+    "description":"Scholarships for students",
+    "official_link":"https:\/\/scholarships.gov.in"
+  },
+  {
+    "scheme_id":25,
+    "scheme_name":"Mid Day Meal Scheme",
+    "scheme_type":"Government",
+    "description":"Free meals for school students",
+    "official_link":"https:\/\/www.education.gov.in"
+  },
+  {
+    "scheme_id":26,
+    "scheme_name":"National Health Mission",
+    "scheme_type":"Government",
+    "description":"Public healthcare strengthening",
+    "official_link":"https:\/\/nhm.gov.in"
+  },
+  {
+    "scheme_id":27,
+    "scheme_name":"National Pension System",
+    "scheme_type":"Government",
+    "description":"Retirement savings scheme",
+    "official_link":"https:\/\/www.npscra.nsdl.co.in"
+  },
+  {
+    "scheme_id":28,
+    "scheme_name":"PM Vishwakarma Yojana",
+    "scheme_type":"Government",
+    "description":"Support for artisans and craftsmen",
+    "official_link":"https:\/\/www.myscheme.gov.in"
+  },
+  {
+    "scheme_id":29,
+    "scheme_name":"One Nation One Ration Card",
+    "scheme_type":"Government",
+    "description":"Portable ration benefits",
+    "official_link":"https:\/\/www.myscheme.gov.in"
+  },
+  {
+    "scheme_id":30,
+    "scheme_name":"Accessible India Campaign",
+    "scheme_type":"Government",
+    "description":"Accessibility for persons with disabilities",
+    "official_link":"https:\/\/www.india.gov.in"
+  },
+  {
+    "scheme_id":31,
+    "scheme_name":"Tata Scholarship Program",
+    "scheme_type":"Private",
+    "description":"Scholarships for underprivileged students",
+    "official_link":"https:\/\/www.tatatrusts.org"
+  },
+  {
+    "scheme_id":32,
+    "scheme_name":"Reliance Foundation Scholarship",
+    "scheme_type":"Private",
+    "description":"Merit based education scholarship",
+    "official_link":"https:\/\/www.reliancefoundation.org"
+  },
+  {
+    "scheme_id":33,
+    "scheme_name":"Infosys Foundation Education Program",
+    "scheme_type":"Private",
+    "description":"Education support initiatives",
+    "official_link":"https:\/\/www.infosysfoundation.org"
+  },
+  {
+    "scheme_id":34,
+    "scheme_name":"Wipro Cares Education Scheme",
+    "scheme_type":"Private",
+    "description":"CSR based education support",
+    "official_link":"https:\/\/www.wipro.com"
+  },
+  {
+    "scheme_id":35,
+    "scheme_name":"HDFC Parivartan CSR",
+    "scheme_type":"Private",
+    "description":"Community and education development",
+    "official_link":"https:\/\/www.hdfcbank.com"
+  },
+  {
+    "scheme_id":36,
+    "scheme_name":"ICICI Foundation Education Initiative",
+    "scheme_type":"Private",
+    "description":"Skill and education development",
+    "official_link":"https:\/\/www.icicifoundation.org"
+  },
+  {
+    "scheme_id":37,
+    "scheme_name":"SBI Student Loan Scheme",
+    "scheme_type":"Private",
+    "description":"Education loans for students",
+    "official_link":"https:\/\/sbi.co.in"
+  },
+  {
+    "scheme_id":38,
+    "scheme_name":"Axis Bank Education Loan",
+    "scheme_type":"Private",
+    "description":"Financial support for higher studies",
+    "official_link":"https:\/\/www.axisbank.com"
+  },
+  {
+    "scheme_id":39,
+    "scheme_name":"LIC Arogya Rakshak Policy",
+    "scheme_type":"Private",
+    "description":"Affordable health insurance",
+    "official_link":"https:\/\/licindia.in"
+  },
+  {
+    "scheme_id":40,
+    "scheme_name":"Star Health Insurance Scheme",
+    "scheme_type":"Private",
+    "description":"Private health insurance coverage",
+    "official_link":"https:\/\/www.starhealth.in"
+  },
+  {
+    "scheme_id":41,
+    "scheme_name":"Apollo Aarogyam Scheme",
+    "scheme_type":"Private",
+    "description":"Affordable healthcare services",
+    "official_link":"https:\/\/www.apollohospitals.com"
+  },
+  {
+    "scheme_id":42,
+    "scheme_name":"Bajaj Allianz Health Guard",
+    "scheme_type":"Private",
+    "description":"Comprehensive health insurance",
+    "official_link":"https:\/\/www.bajajallianz.com"
+  },
+  {
+    "scheme_id":43,
+    "scheme_name":"Tata AIG Health Insurance",
+    "scheme_type":"Private",
+    "description":"Medical insurance support",
+    "official_link":"https:\/\/www.tataaig.com"
+  },
+  {
+    "scheme_id":44,
+    "scheme_name":"Max Life Insurance Plan",
+    "scheme_type":"Private",
+    "description":"Life insurance protection",
+    "official_link":"https:\/\/www.maxlifeinsurance.com"
+  },
+  {
+    "scheme_id":45,
+    "scheme_name":"Google Career Certificates India",
+    "scheme_type":"Private",
+    "description":"Online job skill certification",
+    "official_link":"https:\/\/grow.google"
+  },
+  {
+    "scheme_id":46,
+    "scheme_name":"Microsoft Skill India Initiative",
+    "scheme_type":"Private",
+    "description":"Digital and IT skill training",
+    "official_link":"https:\/\/www.microsoft.com"
+  },
+  {
+    "scheme_id":47,
+    "scheme_name":"Amazon Future Engineer India",
+    "scheme_type":"Private",
+    "description":"STEM education for students",
+    "official_link":"https:\/\/www.amazonfutureengineer.com"
+  },
+  {
+    "scheme_id":48,
+    "scheme_name":"Flipkart Samarth Program",
+    "scheme_type":"Private",
+    "description":"Support for small sellers",
+    "official_link":"https:\/\/seller.flipkart.com"
+  },
+  {
+    "scheme_id":49,
+    "scheme_name":"Paytm Skill Development Program",
+    "scheme_type":"Private",
+    "description":"Digital skills and employment support",
+    "official_link":"https:\/\/paytm.com"
+  },
+  {
+    "scheme_id":50,
+    "scheme_name":"PhonePe Financial Literacy Program",
+    "scheme_type":"Private",
+    "description":"Financial awareness education",
+    "official_link":"https:\/\/www.phonepe.com"
+  },
+  {
+    "scheme_id":51,
+    "scheme_name":"Jio Digital Literacy Program",
+    "scheme_type":"Private",
+    "description":"Digital inclusion initiative",
+    "official_link":"https:\/\/www.jio.com"
+  },
+  {
+    "scheme_id":52,
+    "scheme_name":"Byjus Scholarship Program",
+    "scheme_type":"Private",
+    "description":"Merit based scholarships",
+    "official_link":"https:\/\/byjus.com"
+  },
+  {
+    "scheme_id":53,
+    "scheme_name":"Unacademy Scholarship Scheme",
+    "scheme_type":"Private",
+    "description":"Free learning support",
+    "official_link":"https:\/\/unacademy.com"
+  },
+  {
+    "scheme_id":54,
+    "scheme_name":"TCS Ignite Program",
+    "scheme_type":"Private",
+    "description":"Training for engineering graduates",
+    "official_link":"https:\/\/www.tcs.com"
+  },
+  {
+    "scheme_id":55,
+    "scheme_name":"Zoho Schools Program",
+    "scheme_type":"Private",
+    "description":"Software career education",
+    "official_link":"https:\/\/www.zohoschools.com"
+  },
+  {
+    "scheme_id":56,
+    "scheme_name":"Infosys Springboard",
+    "scheme_type":"Private",
+    "description":"Free digital learning platform",
+    "official_link":"https:\/\/infyspringboard.com"
+  },
+  {
+    "scheme_id":57,
+    "scheme_name":"Google Digital Garage India",
+    "scheme_type":"Private",
+    "description":"Digital marketing skills training",
+    "official_link":"https:\/\/learndigital.withgoogle.com"
+  },
+  {
+    "scheme_id":58,
+    "scheme_name":"Meta Blueprint India",
+    "scheme_type":"Private",
+    "description":"Online business skills training",
+    "official_link":"https:\/\/www.facebook.com\/business\/learn"
+  },
+  {
+    "scheme_id":59,
+    "scheme_name":"NASSCOM FutureSkills Prime",
+    "scheme_type":"Private",
+    "description":"Industry relevant digital skills",
+    "official_link":"https:\/\/futureskillsprime.in"
+  },
+  {
+    "scheme_id":60,
+    "scheme_name":"Udemy India Scholarship",
+    "scheme_type":"Private",
+    "description":"Free professional courses",
+    "official_link":"https:\/\/www.udemy.com"
+  },
+  {
+    "scheme_id":61,
+    "scheme_name":"Coursera Financial Aid India",
+    "scheme_type":"Private",
+    "description":"Online course fee support",
+    "official_link":"https:\/\/www.coursera.org"
+  },
+  {
+    "scheme_id":62,
+    "scheme_name":"edX Learning Support India",
+    "scheme_type":"Private",
+    "description":"University level online education",
+    "official_link":"https:\/\/www.edx.org"
+  },
+  {
+    "scheme_id":63,
+    "scheme_name":"NSDC Private Skill Partnership",
+    "scheme_type":"Private",
+    "description":"Skill development programs",
+    "official_link":"https:\/\/nsdcindia.org"
+  },
+  {
+    "scheme_id":64,
+    "scheme_name":"ITC CSR Rural Development",
+    "scheme_type":"Private",
+    "description":"Rural livelihood improvement",
+    "official_link":"https:\/\/www.itcportal.com"
+  },
+  {
+    "scheme_id":65,
+    "scheme_name":"Mahindra Pride Classroom",
+    "scheme_type":"Private",
+    "description":"Employability training",
+    "official_link":"https:\/\/www.mahindra.com"
+  },
+  {
+    "scheme_id":66,
+    "scheme_name":"Aditya Birla Education Trust",
+    "scheme_type":"Private",
+    "description":"Education support initiatives",
+    "official_link":"https:\/\/www.adityabirla.com"
+  },
+  {
+    "scheme_id":67,
+    "scheme_name":"Godrej Skill Development Program",
+    "scheme_type":"Private",
+    "description":"Skill training for employment",
+    "official_link":"https:\/\/www.godrej.com"
+  },
+  {
+    "scheme_id":68,
+    "scheme_name":"TVS CSR Education Scheme",
+    "scheme_type":"Private",
+    "description":"Education and training support",
+    "official_link":"https:\/\/www.tvsmotor.com"
+  },
+  {
+    "scheme_id":69,
+    "scheme_name":"ONGC CSR Health Program",
+    "scheme_type":"Private",
+    "description":"Healthcare assistance",
+    "official_link":"https:\/\/ongcindia.com"
+  },
+  {
+    "scheme_id":70,
+    "scheme_name":"IOCL CSR Skill Program",
+    "scheme_type":"Private",
+    "description":"Skill development support",
+    "official_link":"https:\/\/iocl.com"
+  },
+  {
+    "scheme_id":71,
+    "scheme_name":"NTPC CSR Education Scheme",
+    "scheme_type":"Private",
+    "description":"Education infrastructure support",
+    "official_link":"https:\/\/ntpc.co.in"
+  },
+  {
+    "scheme_id":72,
+    "scheme_name":"PowerGrid CSR Health Scheme",
+    "scheme_type":"Private",
+    "description":"Health and sanitation projects",
+    "official_link":"https:\/\/www.powergridindia.com"
+  },
+  {
+    "scheme_id":73,
+    "scheme_name":"Adani Foundation Education Program",
+    "scheme_type":"Private",
+    "description":"Education and livelihood support",
+    "official_link":"https:\/\/www.adanifoundation.org"
+  },
+  {
+    "scheme_id":74,
+    "scheme_name":"JSW Foundation Skill Program",
+    "scheme_type":"Private",
+    "description":"Skill and education initiatives",
+    "official_link":"https:\/\/www.jswfoundation.in"
+  },
+  {
+    "scheme_id":75,
+    "scheme_name":"Azim Premji Foundation Education Program",
+    "scheme_type":"Private",
+    "description":"School education improvement",
+    "official_link":"https:\/\/azimpremjifoundation.org"
+  },
+  {
+    "scheme_id":76,
+    "scheme_name":"Smile Foundation Education Scheme",
+    "scheme_type":"Private",
+    "description":"Education for underprivileged children",
+    "official_link":"https:\/\/www.smilefoundationindia.org"
+  },
+  {
+    "scheme_id":77,
+    "scheme_name":"HelpAge India Elder Support Program",
+    "scheme_type":"Private",
+    "description":"Support for senior citizens",
+    "official_link":"https:\/\/www.helpageindia.org"
+  },
+  {
+    "scheme_id":78,
+    "scheme_name":"Teach For India Fellowship",
+    "scheme_type":"Private",
+    "description":"Educational leadership program",
+    "official_link":"https:\/\/www.teachforindia.org"
+  },
+  {
+    "scheme_id":79,
+    "scheme_name":"CRY Child Education Support",
+    "scheme_type":"Private",
+    "description":"Child rights and education",
+    "official_link":"https:\/\/www.cry.org"
+  },
+  {
+    "scheme_id":80,
+    "scheme_name":"Pratham Education Foundation Program",
+    "scheme_type":"Private",
+    "description":"Primary education improvement",
+    "official_link":"https:\/\/www.pratham.org"
+  },
+  {
+    "scheme_id":81,
+    "scheme_name":"Akshaya Patra Foundation Program",
+    "scheme_type":"Private",
+    "description":"Mid day meals for students",
+    "official_link":"https:\/\/www.akshayapatra.org"
+  },
+  {
+    "scheme_id":82,
+    "scheme_name":"Goonj Rural Development Program",
+    "scheme_type":"Private",
+    "description":"Clothing and rural development",
+    "official_link":"https:\/\/goonj.org"
+  },
+  {
+    "scheme_id":83,
+    "scheme_name":"SEWA Women Empowerment Program",
+    "scheme_type":"Private",
+    "description":"Self employment for women",
+    "official_link":"https:\/\/www.sewa.org"
+  },
+  {
+    "scheme_id":84,
+    "scheme_name":"Barefoot College Program",
+    "scheme_type":"Private",
+    "description":"Skill training for rural women",
+    "official_link":"https:\/\/www.barefootcollege.org"
+  },
+  {
+    "scheme_id":85,
+    "scheme_name":"Digital Empowerment Foundation Program",
+    "scheme_type":"Private",
+    "description":"Digital inclusion initiatives",
+    "official_link":"https:\/\/www.defindia.org"
+  },
+  {
+    "scheme_id":86,
+    "scheme_name":"GiveIndia Education Support",
+    "scheme_type":"Private",
+    "description":"Crowdfunded education support",
+    "official_link":"https:\/\/www.giveindia.org"
+  },
+  {
+    "scheme_id":87,
+    "scheme_name":"Ketto Social Impact Program",
+    "scheme_type":"Private",
+    "description":"Crowdfunded welfare support",
+    "official_link":"https:\/\/www.ketto.org"
+  },
+  {
+    "scheme_id":88,
+    "scheme_name":"Milaap Social Welfare Program",
+    "scheme_type":"Private",
+    "description":"Medical and education crowdfunding",
+    "official_link":"https:\/\/www.milaap.org"
+  },
+  {
+    "scheme_id":89,
+    "scheme_name":"Impact Guru Health Support",
+    "scheme_type":"Private",
+    "description":"Medical crowdfunding assistance",
+    "official_link":"https:\/\/www.impactguru.com"
+  },
+  {
+    "scheme_id":90,
+    "scheme_name":"Save the Children India Program",
+    "scheme_type":"Private",
+    "description":"Child welfare and education",
+    "official_link":"https:\/\/www.savethechildren.in"
+  },
+  {
+    "scheme_id":91,
+    "scheme_name":"CARE India Livelihood Program",
+    "scheme_type":"Private",
+    "description":"Livelihood and women empowerment",
+    "official_link":"https:\/\/www.careindia.org"
+  },
+  {
+    "scheme_id":92,
+    "scheme_name":"Oxfam India Development Program",
+    "scheme_type":"Private",
+    "description":"Poverty and inequality reduction",
+    "official_link":"https:\/\/www.oxfamindia.org"
+  },
+  {
+    "scheme_id":93,
+    "scheme_name":"World Vision India Program",
+    "scheme_type":"Private",
+    "description":"Child development and education",
+    "official_link":"https:\/\/www.worldvision.in"
+  },
+  {
+    "scheme_id":94,
+    "scheme_name":"Rotary India Education Program",
+    "scheme_type":"Private",
+    "description":"Education and health initiatives",
+    "official_link":"https:\/\/rotaryindia.org"
+  },
+  {
+    "scheme_id":95,
+    "scheme_name":"Lions Clubs India Welfare Program",
+    "scheme_type":"Private",
+    "description":"Community welfare activities",
+    "official_link":"https:\/\/www.lionsclubs.org"
+  },
+  {
+    "scheme_id":96,
+    "scheme_name":"Indian Red Cross Society Program",
+    "scheme_type":"Private",
+    "description":"Disaster and health support",
+    "official_link":"https:\/\/www.indianredcross.org"
+  },
+  {
+    "scheme_id":97,
+    "scheme_name":"UNICEF India Education Program",
+    "scheme_type":"Private",
+    "description":"Child education and health",
+    "official_link":"https:\/\/www.unicef.org\/india"
+  },
+  {
+    "scheme_id":98,
+    "scheme_name":"WHO India Health Support",
+    "scheme_type":"Private",
+    "description":"Public health awareness",
+    "official_link":"https:\/\/www.who.int"
+  },
+  {
+    "scheme_id":99,
+    "scheme_name":"UNDP India Livelihood Program",
+    "scheme_type":"Private",
+    "description":"Sustainable development initiatives",
+    "official_link":"https:\/\/www.undp.org"
+  },
+  {
+    "scheme_id":100,
+    "scheme_name":"UNESCO India Education Program",
+    "scheme_type":"Private",
+    "description":"Education and cultural development",
+    "official_link":"https:\/\/www.unesco.org"
+  }
+]

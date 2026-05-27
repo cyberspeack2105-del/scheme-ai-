@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
-import { Outlet, Link, useLocation, useNavigate } from 'react-router-dom';
+'use client';
+
+import { Link, useLocation, useNavigate } from '@/utils/navigation';
 import {
     LayoutDashboard,
     Users,
@@ -15,7 +16,7 @@ import {
 } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
 
-const TradeLayout = () => {
+const TradeLayout = ({ children }) => {
     const { logout } = useAuth();
     const navigate = useNavigate();
     const location = useLocation();
@@ -124,7 +125,7 @@ const TradeLayout = () => {
                 />
 
                 <div className="relative z-10">
-                    <Outlet />
+                    {children}
                 </div>
             </main>
         </div>

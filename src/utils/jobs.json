@@ -1,0 +1,461 @@
+[
+  {
+    "id":"1",
+    "name":"Naukri.com",
+    "type":"Private",
+    "description":"India\u2019s largest private job portal",
+    "website":"https:\/\/www.naukri.com",
+    "job_domains":"Full Stack,Web Development,Data Science,Cloud",
+    "skill_requirements":"Python,Java,JavaScript,C++,SQL,React,Node.js,AWS"
+  },
+  {
+    "id":"2",
+    "name":"Indeed India",
+    "type":"Private",
+    "description":"Global job search engine",
+    "website":"https:\/\/in.indeed.com",
+    "job_domains":"Software Development,IT Jobs,Web Development",
+    "skill_requirements":"Python,Java,C++,JavaScript,SQL,HTML,CSS"
+  },
+  {
+    "id":"3",
+    "name":"LinkedIn Jobs",
+    "type":"Private",
+    "description":"Professional networking job portal",
+    "website":"https:\/\/www.linkedin.com\/jobs",
+    "job_domains":"Software Engineering,Full Stack,AI\/ML",
+    "skill_requirements":"Python,Java,JavaScript,System Design,DSA,Cloud"
+  },
+  {
+    "id":"4",
+    "name":"Monster India",
+    "type":"Private",
+    "description":"Professional recruitment portal",
+    "website":"https:\/\/www.monsterindia.com",
+    "job_domains":"IT Services,Web & App Development",
+    "skill_requirements":"Java,Python,Spring Boot,JavaScript,Angular"
+  },
+  {
+    "id":"5",
+    "name":"Foundit",
+    "type":"Private",
+    "description":"AI powered job portal",
+    "website":"https:\/\/www.foundit.in",
+    "job_domains":"AI Jobs,Software Engineering,Cloud",
+    "skill_requirements":"Python,Machine Learning,Java,SQL,Cloud Computing"
+  },
+  {
+    "id":"6",
+    "name":"CutShort",
+    "type":"Private",
+    "description":"Tech and startup hiring",
+    "website":"https:\/\/cutshort.io",
+    "job_domains":"Startup Tech Jobs,Full Stack",
+    "skill_requirements":"JavaScript,React,Node.js,Python,Docker"
+  },
+  {
+    "id":"7",
+    "name":"AngelList Talent",
+    "type":"Private",
+    "description":"Startup job portal",
+    "website":"https:\/\/angel.co\/jobs",
+    "job_domains":"Startup Engineering,Product Development",
+    "skill_requirements":"Python,JavaScript,React,Node.js,System Design"
+  },
+  {
+    "id":"8",
+    "name":"Hirect",
+    "type":"Private",
+    "description":"Chat-based startup hiring",
+    "website":"https:\/\/www.hirect.in",
+    "job_domains":"Full Stack,Backend,Frontend",
+    "skill_requirements":"Java,Python,JavaScript,Spring Boot,React"
+  },
+  {
+    "id":"9",
+    "name":"Glassdoor India",
+    "type":"Private",
+    "description":"Jobs with salary insights",
+    "website":"https:\/\/www.glassdoor.co.in",
+    "job_domains":"IT Jobs,Software Roles",
+    "skill_requirements":"Python,Java,C++,SQL,Web Technologies"
+  },
+  {
+    "id":"10",
+    "name":"SimplyHired India",
+    "type":"Private",
+    "description":"Job aggregator platform",
+    "website":"https:\/\/www.simplyhired.co.in",
+    "job_domains":"Software & IT Jobs",
+    "skill_requirements":"Python,Java,JavaScript,HTML,CSS"
+  },
+  {
+    "id":"11",
+    "name":"Google Careers India",
+    "type":"Private",
+    "description":"Technology jobs",
+    "website":"https:\/\/careers.google.com",
+    "job_domains":"Software Engineer,AI\/ML,Cloud",
+    "skill_requirements":"Python,Java,C++,Data Structures,Algorithms"
+  },
+  {
+    "id":"12",
+    "name":"Microsoft Careers India",
+    "type":"Private",
+    "description":"Software and cloud jobs",
+    "website":"https:\/\/careers.microsoft.com",
+    "job_domains":"Full Stack,Cloud Engineer",
+    "skill_requirements":"C#,Java,Python,Azure,JavaScript"
+  },
+  {
+    "id":"13",
+    "name":"Amazon India Jobs",
+    "type":"Private",
+    "description":"E-commerce and tech jobs",
+    "website":"https:\/\/www.amazon.jobs",
+    "job_domains":"Backend,Cloud,Data Engineering",
+    "skill_requirements":"Java,Python,Distributed Systems,AWS"
+  },
+  {
+    "id":"14",
+    "name":"Accenture Careers",
+    "type":"Private",
+    "description":"Consulting and IT jobs",
+    "website":"https:\/\/www.accenture.com\/careers",
+    "job_domains":"Enterprise Software,Full Stack",
+    "skill_requirements":"Java,Python,Angular,React,SQL"
+  },
+  {
+    "id":"15",
+    "name":"TCS Careers",
+    "type":"Private",
+    "description":"IT services jobs",
+    "website":"https:\/\/www.tcs.com\/careers",
+    "job_domains":"Web Development,Software Testing",
+    "skill_requirements":"Java,Python,HTML,CSS,JavaScript"
+  },
+  {
+    "id":"16",
+    "name":"Infosys Careers",
+    "type":"Private",
+    "description":"IT consulting jobs",
+    "website":"https:\/\/www.infosys.com\/careers",
+    "job_domains":"Application Development,Cloud",
+    "skill_requirements":"Java,Python,Spring,SQL"
+  },
+  {
+    "id":"17",
+    "name":"Wipro Careers",
+    "type":"Private",
+    "description":"IT services hiring",
+    "website":"https:\/\/careers.wipro.com",
+    "job_domains":"Web Apps,DevOps",
+    "skill_requirements":"Python,Java,Docker,Kubernetes"
+  },
+  {
+    "id":"18",
+    "name":"HCL Careers",
+    "type":"Private",
+    "description":"Technology jobs",
+    "website":"https:\/\/www.hcltech.com\/careers",
+    "job_domains":"Cloud,Automation,Full Stack",
+    "skill_requirements":"Java,Python,DevOps,React"
+  },
+  {
+    "id":"19",
+    "name":"Zoho Careers",
+    "type":"Private",
+    "description":"SaaS product jobs",
+    "website":"https:\/\/www.zoho.com\/careers",
+    "job_domains":"Product Engineering,Web Development",
+    "skill_requirements":"Java,JavaScript,HTML,CSS,SQL"
+  },
+  {
+    "id":"20",
+    "name":"Razorpay Careers",
+    "type":"Private",
+    "description":"Fintech jobs",
+    "website":"https:\/\/razorpay.com\/jobs",
+    "job_domains":"Backend,Payment Systems",
+    "skill_requirements":"Java,Python,APIs,Microservices"
+  },
+  {
+    "id":"21",
+    "name":"Paytm Careers",
+    "type":"Private",
+    "description":"Fintech startup jobs",
+    "website":"https:\/\/paytm.com\/careers",
+    "job_domains":"Fintech,Mobile Apps",
+    "skill_requirements":"Java,Python,Android,iOS,APIs"
+  },
+  {
+    "id":"22",
+    "name":"PhonePe Careers",
+    "type":"Private",
+    "description":"Digital payment jobs",
+    "website":"https:\/\/www.phonepe.com\/careers",
+    "job_domains":"Backend,UPI Systems",
+    "skill_requirements":"Java,Python,Microservices"
+  },
+  {
+    "id":"23",
+    "name":"Flipkart Careers",
+    "type":"Private",
+    "description":"E-commerce jobs",
+    "website":"https:\/\/www.flipkartcareers.com",
+    "job_domains":"Full Stack,Supply Chain Tech",
+    "skill_requirements":"Java,Python,React,SQL"
+  },
+  {
+    "id":"24",
+    "name":"Swiggy Careers",
+    "type":"Private",
+    "description":"Food delivery jobs",
+    "website":"https:\/\/careers.swiggy.com",
+    "job_domains":"Backend,Data Analytics",
+    "skill_requirements":"Python,Java,SQL"
+  },
+  {
+    "id":"25",
+    "name":"Zomato Careers",
+    "type":"Private",
+    "description":"Food tech jobs",
+    "website":"https:\/\/www.zomato.com\/careers",
+    "job_domains":"Product Tech,Web Apps",
+    "skill_requirements":"JavaScript,React,Node.js"
+  },
+  {
+    "id":"26",
+    "name":"Ola Careers",
+    "type":"Private",
+    "description":"Mobility jobs",
+    "website":"https:\/\/www.olacabs.com\/careers",
+    "job_domains":"AI,Backend Systems",
+    "skill_requirements":"Python,Java,Data Engineering"
+  },
+  {
+    "id":"27",
+    "name":"Uber India Careers",
+    "type":"Private",
+    "description":"Ride sharing jobs",
+    "website":"https:\/\/www.uber.com\/careers",
+    "job_domains":"Distributed Systems,AI",
+    "skill_requirements":"Python,Java,Big Data"
+  },
+  {
+    "id":"28",
+    "name":"Byjus Careers",
+    "type":"Private",
+    "description":"EdTech jobs",
+    "website":"https:\/\/byjus.com\/careers",
+    "job_domains":"EdTech Platforms,Content Tech",
+    "skill_requirements":"Python,JavaScript,LMS Tools"
+  },
+  {
+    "id":"29",
+    "name":"Unacademy Careers",
+    "type":"Private",
+    "description":"Online education jobs",
+    "website":"https:\/\/unacademy.com\/careers",
+    "job_domains":"Learning Platforms,Backend",
+    "skill_requirements":"Python,Java,Web Tech"
+  },
+  {
+    "id":"30",
+    "name":"Jio Careers",
+    "type":"Private",
+    "description":"Telecom jobs",
+    "website":"https:\/\/www.jio.com\/careers",
+    "job_domains":"Network Tech,IT Systems",
+    "skill_requirements":"Networking,Python,Cloud"
+  },
+  {
+    "id":"31",
+    "name":"Airtel Careers",
+    "type":"Private",
+    "description":"Telecommunication jobs",
+    "website":"https:\/\/www.airtel.com\/careers",
+    "job_domains":"Telecom IT,Cloud",
+    "skill_requirements":"Networking,Java,Python"
+  },
+  {
+    "id":"32",
+    "name":"Adani Careers",
+    "type":"Private",
+    "description":"Infrastructure jobs",
+    "website":"https:\/\/www.adani.com\/careers",
+    "job_domains":"Engineering Systems,Automation",
+    "skill_requirements":"Project Management,Engineering"
+  },
+  {
+    "id":"33",
+    "name":"Reliance Careers",
+    "type":"Private",
+    "description":"Corporate group jobs",
+    "website":"https:\/\/www.ril.com\/careers",
+    "job_domains":"Enterprise IT,Digital",
+    "skill_requirements":"Java,Cloud,ERP"
+  },
+  {
+    "id":"34",
+    "name":"National Career Service",
+    "type":"Government",
+    "description":"Official Govt of India job portal",
+    "website":"https:\/\/www.ncs.gov.in",
+    "job_domains":"Govt Jobs,IT Support",
+    "skill_requirements":"Computer Basics,Data Entry"
+  },
+  {
+    "id":"35",
+    "name":"Employment News",
+    "type":"Government",
+    "description":"Weekly govt job publication",
+    "website":"https:\/\/www.employmentnews.gov.in",
+    "job_domains":"Govt Exams,Clerical",
+    "skill_requirements":"General Knowledge,Reading"
+  },
+  {
+    "id":"36",
+    "name":"Sarkari Result",
+    "type":"Government",
+    "description":"Government job alerts",
+    "website":"https:\/\/www.sarkariresult.com",
+    "job_domains":"Govt Exams",
+    "skill_requirements":"Aptitude,Reasoning"
+  },
+  {
+    "id":"37",
+    "name":"FreeJobAlert",
+    "type":"Government",
+    "description":"Free govt job notifications",
+    "website":"https:\/\/www.freejobalert.com",
+    "job_domains":"Govt Recruitment",
+    "skill_requirements":"Time Management,Exam Prep"
+  },
+  {
+    "id":"38",
+    "name":"UPSC",
+    "type":"Government",
+    "description":"Civil services recruitment",
+    "website":"https:\/\/www.upsc.gov.in",
+    "job_domains":"Administration,Policy",
+    "skill_requirements":"Essay Writing,GS,Analysis"
+  },
+  {
+    "id":"39",
+    "name":"SSC",
+    "type":"Government",
+    "description":"Staff Selection Commission jobs",
+    "website":"https:\/\/ssc.nic.in",
+    "job_domains":"Clerical,Inspector",
+    "skill_requirements":"Quantitative Aptitude,Reasoning"
+  },
+  {
+    "id":"40",
+    "name":"IBPS",
+    "type":"Government",
+    "description":"Banking recruitment exams",
+    "website":"https:\/\/www.ibps.in",
+    "job_domains":"Banking IT,Clerical",
+    "skill_requirements":"Banking Knowledge,Maths"
+  },
+  {
+    "id":"41",
+    "name":"Railway Recruitment Board",
+    "type":"Government",
+    "description":"Indian Railways jobs",
+    "website":"https:\/\/www.rrbcdg.gov.in",
+    "job_domains":"Technical,Non-Technical",
+    "skill_requirements":"Technical Skills,Aptitude"
+  },
+  {
+    "id":"42",
+    "name":"DRDO Careers",
+    "type":"Government",
+    "description":"Defense research jobs",
+    "website":"https:\/\/www.drdo.gov.in\/careers",
+    "job_domains":"Research,Engineering",
+    "skill_requirements":"C++,Python,Electronics"
+  },
+  {
+    "id":"43",
+    "name":"ISRO Careers",
+    "type":"Government",
+    "description":"Space research jobs",
+    "website":"https:\/\/www.isro.gov.in\/careers",
+    "job_domains":"Aerospace,Software",
+    "skill_requirements":"C++,Python,Simulation"
+  },
+  {
+    "id":"44",
+    "name":"BEL Careers",
+    "type":"Government",
+    "description":"PSU electronics jobs",
+    "website":"https:\/\/bel-india.in",
+    "job_domains":"Embedded Systems",
+    "skill_requirements":"C,C++,Electronics"
+  },
+  {
+    "id":"45",
+    "name":"BSNL Careers",
+    "type":"Government",
+    "description":"Telecom PSU jobs",
+    "website":"http:\/\/www.bsnl.co.in",
+    "job_domains":"Telecom IT",
+    "skill_requirements":"Networking,Hardware"
+  },
+  {
+    "id":"46",
+    "name":"Coal India Careers",
+    "type":"Government",
+    "description":"Mining PSU jobs",
+    "website":"https:\/\/www.coalindia.in",
+    "job_domains":"Mining Tech",
+    "skill_requirements":"Engineering,Safety"
+  },
+  {
+    "id":"47",
+    "name":"ONGC Careers",
+    "type":"Government",
+    "description":"Energy PSU jobs",
+    "website":"https:\/\/www.ongcindia.com",
+    "job_domains":"Energy Systems",
+    "skill_requirements":"Mechanical,Chemical"
+  },
+  {
+    "id":"48",
+    "name":"Indian Oil Careers",
+    "type":"Government",
+    "description":"Oil PSU jobs",
+    "website":"https:\/\/www.iocl.com",
+    "job_domains":"Process Engineering",
+    "skill_requirements":"Chemical Engineering"
+  },
+  {
+    "id":"49",
+    "name":"AIIMS Recruitment",
+    "type":"Government",
+    "description":"Medical and hospital jobs",
+    "website":"https:\/\/www.aiimsexams.ac.in",
+    "job_domains":"Medical IT,Healthcare",
+    "skill_requirements":"Medical Knowledge"
+  },
+  {
+    "id":"50",
+    "name":"ESIC Jobs",
+    "type":"Government",
+    "description":"Insurance medical jobs",
+    "website":"https:\/\/www.esic.nic.in",
+    "job_domains":"Healthcare Admin",
+    "skill_requirements":"Clerical,Medical Admin"
+  },
+  {
+    "id":"51\u2013100",
+    "name":"State PSCs & Govt Boards",
+    "type":"Government",
+    "description":"State-level technical & admin jobs",
+    "website":"Various",
+    "job_domains":"IT Officer,Assistant Engineer,Programmer",
+    "skill_requirements":"Python,Java,Computer Basics,Aptitude"
+  }
+]

@@ -1,4 +1,4 @@
-import { Navigate, useLocation } from 'react-router-dom';
+import { Navigate, useLocation } from '@/utils/navigation';
 import { useAuth } from '../../context/AuthContext';
 
 const AdminRoute = ({ children }) => {

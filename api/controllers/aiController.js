@@ -417,6 +417,7 @@ exports.submitAnswer = async (req, res) => {
 // AI-powered Scheme Recommendations and Explanations
 exports.getAIRecommendations = async (req, res) => {
   try {
+    console.log("Received request for /recommend:", req.body);
     const userProfile = req.body;
     
     // Get static recommendations (candidate list)
